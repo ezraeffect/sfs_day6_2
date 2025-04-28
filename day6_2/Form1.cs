@@ -16,27 +16,15 @@ namespace day6_2
         {
             InitializeComponent();
 
-            string[,] korean = {{"가","나","다"},
-                                {"라","마","바"},
-                                {"사","아","자"}};
+            string[][] classArray = new string[3][];
+            classArray[0] = new string[] { "홍길동", "박지영" };
+            classArray[1] = new string[] { "박아무개", "김갑순", "홍길순" };
+            classArray[2] = new string[] { "이민우" };
 
-            textBox1.Text = korean[1, 2];
+            textBox1.Text = $"1반 학생 목록 \r\n - {classArray[0][0]}\r\n - {classArray[0][1]}\r\n";
+            textBox1.Text += $"2반 학생 목록 \r\n - {classArray[1][0]}\r\n - {classArray[1][1]}\r\n - {classArray[1][2]}\r\n";
+            textBox1.Text += $"3반 학생 목록 \r\n - {classArray[2][0]}";
 
-            int[,,] nums = new int[,,]
-            {
-                {
-                    {1, 2, 3},
-                    {4, 5, 6}
-                },
-                {
-                    {7, 8, 9},
-                    {10, 11, 12}
-                }
-            };
-
-            textBox1.Text += nums[1,0,1];
-
-            
         }
     }
 }
